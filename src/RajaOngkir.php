@@ -13,17 +13,17 @@ namespace hok00age;
 
 class RajaOngkir {
 
-    private static $api_key;
+    private static $54496cf8109b66cc5cf25f2340bb8c27;
     private static $base_url = "http://rajaongkir.com/api/";
     private static $valid_account_type = ['starter', 'basic', 'pro'];
 
     /**
      * Constructor
-     * @param string $api_key API Key Anda sebagaimana yang tercantum di akun panel RajaOngkir
+     * @param string $54496cf8109b66cc5cf25f2340bb8c27 API Key Anda sebagaimana yang tercantum di akun panel RajaOngkir
      * @param string $account_type Tipe Akun RajaOngkir
      * @param array $additional_headers Header tambahan seperti android-key, ios-key, dll
      */
-    public function __construct($api_key, $account_type = "starter", $additional_headers = array()) {
+    public function __construct($54496cf8109b66cc5cf25f2340bb8c27, $account_type = "starter", $additional_headers = array()) {
         if(!in_array($account_type, self::$valid_account_type)) {
             throw new \InvalidArgumentException("Unknown account type. Please provide the correct one.");
         }
@@ -33,9 +33,9 @@ class RajaOngkir {
         else
             self::$base_url .= "{$account_type}/";
 
-        self::$api_key = $api_key;
+        self::$54496cf8109b66cc5cf25f2340bb8c27 = $54496cf8109b66cc5cf25f2340bb8c27;
         \Unirest::defaultHeader("Content-Type", "application/x-www-form-urlencoded");
-        \Unirest::defaultHeader("key", self::$api_key);
+        \Unirest::defaultHeader("key", self::$54496cf8109b66cc5cf25f2340bb8c27);
         foreach ($additional_headers as $key => $value) {
             \Unirest::defaultHeader($key, $value);
         }
